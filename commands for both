@@ -3,8 +3,8 @@
 ###Install docker by the following commands:
 
 #Update the system as per the latest available update packages in Rocky Linux 9
-sudo dnf install -y yum-utils
 sudo dnf -y update
+sudo dnf install -y yum-utils
 reboot
 
 #Add docker official repo for rocky and centos
