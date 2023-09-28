@@ -27,8 +27,11 @@ echo "Enable docker service"
 #systemctl status docker
 
 #Adding permissions to current user for docker, attempting to reload group membership
-#sudo usermod -aG docker $USER
+#usermod -aG docker -a $USER
+#GROUP=$(id -g)
 #newgrp docker
+#newgrp $GROUP
+#unset GROUP
 
 #Check example
 #docker compose version
