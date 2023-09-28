@@ -34,5 +34,3 @@ systemctl status docker
 #docker compose version
 #docker pull httpd
 #docker images
-#---------------------------------------------------------------------------------------------------------------------------
- 
