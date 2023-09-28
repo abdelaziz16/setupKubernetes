@@ -22,9 +22,9 @@ dnf install -y docker-ce containerd.io
 
 #Setting up docker service
 echo "Enable docker service"
-systemctl enable docker
-systemctl start docker
-systemctl status docker
+#systemctl enable docker
+#systemctl start docker
+#systemctl status docker
 
 #Adding permissions to current user for docker, attempting to reload group membership
 #sudo usermod -aG docker $USER
@@ -34,3 +34,5 @@ systemctl status docker
 #docker compose version
 #docker pull httpd
 #docker images
+
+echo "Script finished"
