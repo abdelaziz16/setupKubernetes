@@ -1,17 +1,21 @@
-#####Install a rockey 9.2 os on two machines and then on both
-#-------------------------------------------------------------------------------------------------------------
-###Install docker by the following commands:
+#####Install containerd.io on rockey 9.2 os 
+#!/usr/bin/bash
+
+###Install docker with all compnent check the hashed lines
 
 #Update the system as per the latest available update packages in Rocky Linux 9
+echo "Update the system as per the latest available update packages in Rocky Linux 9"
 sudo dnf -y update
 sudo dnf install -y yum-utils
-reboot
+#reboot
 
 #Add docker official repo for rocky and centos
+echo "Add docker official repo for rocky and centos"
 dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 dnf repolist
 
 #Install docker compnents
+echo "Install docker container.io"
 sudo dnf -y install lsb-release gnupg apt-transport-https ca-certificates curl software-properties-common
 dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
