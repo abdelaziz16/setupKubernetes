@@ -17,20 +17,22 @@ dnf repolist
 #Install docker compnents
 echo "Install docker container.io"
 sudo dnf -y install lsb-release gnupg apt-transport-https ca-certificates curl software-properties-common
-dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+dnf install -y docker-ce containerd.io
+#dnf install -y docker-ce docker-ce-cli docker-buildx-plugin docker-compose-plugin
 
 #Setting up docker service
+echo "Enable docker service"
 systemctl enable docker
 systemctl start docker
 systemctl status docker
 
 #Adding permissions to current user for docker, attempting to reload group membership
-sudo usermod -aG docker $USER
-newgrp docker
+#sudo usermod -aG docker $USER
+#newgrp docker
 
 #Check example
-docker compose version
-docker pull httpd
-docker images
+#docker compose version
+#docker pull httpd
+#docker images
 #---------------------------------------------------------------------------------------------------------------------------
  
